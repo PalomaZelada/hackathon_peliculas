@@ -313,3 +313,52 @@ li{
 .poster1{
     width: 100%;
 }
+/* menu social */
+.social-bar{
+    position: fixed;
+    right: 0;
+    top: 200px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+    list-style: none;}
+ .icon{
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: all 5s;
+    display: inline-block;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+ }
+ .icon:hover{
+    padding: 10px 25px;
+    background: #000000
+ ;}.icon-facebook2 {
+ background: #2e406e
+ ;
+ }
+ .icon-youtube{
+    background: #e83028
+ ;
+ }
+ .icon-instagram{
+    background: #fc1a5e
+ ;
+ }
+ .icon-google-plus3{
+    background: #e83028
+ ;
+ }
+ .icoon:first-child{
+ border-radius: 1rem 0 0 0;
+ }
+ .icoon:last-child{
+    border-radius: 1rem 0 0 0;
+    }
+ 
+ 
+ 
