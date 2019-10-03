@@ -2,12 +2,30 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #828282;
 
-    background-image: url();
-    background-color:rgba(31, 31, 31, 1);
+    background-image: url(https://i.ibb.co/7RrGgWt/moonlight-background.png);
+    background-repeat: no-repeat;
+    background-color:rgb(0, 0, 0);
+
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: "logo logo search search"
+                         "header header header header"
+                         "header header header header"
+                         "filter-menu filter-menu filter-menu filter-menu"
+                         "movies movies movies movies"
+                         ;
+
 }
 
 /* Nombre de película en páginas interiores*/
@@ -47,15 +65,27 @@ li{
     list-style: none;
 }
 
+.logo{
+    grid-area: logo;
+    width: 70%;
+    margin: 40px;
+}
+
 /*Buscador*/
 .search-container{
-    display:flex; 
+    grid-area: search;
+
+    display: flex;
     flex-direction: row;
-    margin: 5%;
+    margin: 40px;
+
+    width: 30%;
+    position: absolute;
+    right: 0;
 }
 
 .search{
-    width: 20%;
+    width: 60%;
     padding: 10px;
     outline-style: none;
     border: none;
@@ -66,7 +96,7 @@ li{
 }
 
 .search-button{
-    width: 15%;
+    width: 40%;
     padding: 10px;
     outline-style: none;
     border: none;
@@ -87,13 +117,8 @@ li{
 }
 
 
-/*película destacada*/
-
 /*Disposición de header, menú de filtros y catálogo de películas*/
 #movie-container, .filter-menu, .movies-catalog{
-    width: 80%;
-    margin: 50px auto;
-
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -101,8 +126,39 @@ li{
     justify-content: center;
 }
 
+.filter-menu, .movies-catalog{
+    margin: 50px auto;
+    width: 80%;
+}
+
+.filter-menu{
+    grid-area: filter-menu;
+}
+
+#movie-container{
+    grid-area: header;
+    width: 80%;
+    margin: auto;
+}
+
+/* poster película destacada*/
+.movie-poster{
+    width: 50%;
+    margin: 30px 0 0 60px;
+}
+
+.poster-container{
+    margin: auto 0 auto auto;
+    align-items: center;
+}
+
+.review-element{
+    margin: 30px 0;
+}
+
 /* visualización de las películas*/
 .container{
+    grid-area: movies;
     width: 90%;
     margin: auto;
 
@@ -157,12 +213,6 @@ li{
     background-color: rgba(246, 27, 106, 1);
 }
 
-
-/* poster película destacada*/
-.movie-poster{
-    width: 50%;
-}
-
 /* link leer más */
 .read-more, :visited{
     color:rgba(246, 27, 106, 1);
@@ -184,6 +234,9 @@ li{
     color: white;
 
     text-align: center;
+
+    outline-color: transparent;
+    outline-style: none;
 }
 
 
@@ -220,4 +273,29 @@ li{
 
 .stars-rating > input:checked ~ label{
     color:  rgba(246, 27, 106, 1);
+}
+
+/* menu lateral con iconos*/
+.menu{
+    margin: 30px 5px 30px 30px;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    color: white;
+    margin: 20px 0;
+}
+
+.menu a:hover{
+    color: rgba(246, 27, 106, 1);
+}
+
+.hidden-name{
+    margin: 5px;
 }
