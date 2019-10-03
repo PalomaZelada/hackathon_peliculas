@@ -116,7 +116,7 @@ mostVoted.addEventListener('click', showMostVoted);
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
             <p class="actors"><strong>Protagonistas: </strong>${data.Actors}</p>
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
-            <p class="votes"><strong>Recomendaciones del público: </strong>${data.imdbVotes}</p></div>
+            <p class="votes"><strong>Votos del público: </strong>${data.imdbVotes}</p></div>
             <br>
             <br>
             </div>`
