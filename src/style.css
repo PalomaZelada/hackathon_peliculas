@@ -313,6 +313,10 @@ li{
 .poster1{
     width: 100%;
 }
+.poster{
+    width: 400px;
+    height: 500px;
+}
 /* menu social */
 .social-bar{
     position: fixed;
