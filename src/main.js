@@ -34,13 +34,14 @@ document.getElementById('searchBtn').addEventListener('click', function(){
        btnShowMore.className = "show-more-button";
        
        btnShowMore.addEventListener('click', () => {
+           document.getElementById("container").innerHTML= '';
            const imdbId = data.Search[i].imdbID;
            fetch('http://www.omdbapi.com/?i='+imdbId+'&plot=full'+'&apikey=c26bee66&')
            .then(result => result.json())
            .then(data => {
                document.getElementById("container").innerHTML +=
                `<div class="bestResult">
-               <img class="poster" src=${data.Poster}>
+               <img class="poster1" src=${data.Poster}>
                <div class="textBestResult">
                <p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
                <h2 class="title">${data.Title}</h2>
@@ -70,13 +71,15 @@ bestRated.addEventListener('click', showBestRated);
  
     function showBestRated()
     {bestRatedImdb.map(function(imdbId){
+        document.getElementById("container").innerHTML= '';
+
         fetch('http://www.omdbapi.com/?i='+imdbId+'&plot=full&apikey=c26bee66&')
         .then(result => result.json())
         .then(data => {
             document.getElementById("container").innerHTML +=
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
-            <div class="infoContainer">
+            <div class="textBestResult">
             <p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
             <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
@@ -98,20 +101,23 @@ mostVoted.addEventListener('click', showMostVoted);
  
     function showMostVoted()
     {mostVotedImdb.map(function(imdbId){
+        document.getElementById("container").innerHTML= '';
+
         fetch('http://www.omdbapi.com/?i='+imdbId+'&plot=full&apikey=c26bee66&')
         .then(result => result.json())
         .then(data => {
             document.getElementById("container").innerHTML +=
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
+            <div class="textBestResult">
+            
             <h2 class="title">${data.Title}</h2>
-            <div class="infoContainer">
             <p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
-            <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
             <p class="actors"><strong>Protagonistas: </strong>${data.Actors}</p>
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
             <p class="votes"><strong>Recomendaciones del público: </strong>${data.imdbVotes}</p></div>
+            <br>
             <br>
             </div>`
         })
@@ -129,13 +135,15 @@ awards.addEventListener('click', showMostAwards);
  
     function showMostAwards()
     {mostAwards.map(function(imdbId){
+        document.getElementById("container").innerHTML= '';
+
         fetch('http://www.omdbapi.com/?i='+imdbId+'&plot=full&apikey=c26bee66&')
         .then(result => result.json())
         .then(data => {
             document.getElementById("container").innerHTML +=
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
-            <div class="infoContainer">
+            <div class="textBestResult">
             <p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
             <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
