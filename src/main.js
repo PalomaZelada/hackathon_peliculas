@@ -139,3 +139,14 @@ awards.addEventListener('click', showMostAwards);
         })
     })
 }
+const btnFilters = document.getElementsById("btnBestRated");
+btnFilters.addEventListener("click", ()=>{
+
+  const showFilters = document.getElementById("container");
+  showFilters.style.display = "block";
+
+  const hiddenLanding = document.getElementById("landing");
+  hiddenLanding.style.display = "none";
+  const hiddenLandingTwo = document.getElementById("landing-two");
+  hiddenLandingTwo.style.display = "none";
+});
