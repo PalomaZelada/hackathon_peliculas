@@ -74,11 +74,12 @@ bestRated.addEventListener('click', showBestRated);
             document.getElementById("container").innerHTML +=
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
+            <div class="infoContainer"><p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
             <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
             <p class="actors"><strong>Protagonistas: </strong>${data.Actors}</p>
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
-            <p class="ratins"><strong>Evaluación de críticos: </strong>${data.imdbRating}</p>
+            <p class="ratins"><strong>Evaluación de críticos: </strong>${data.imdbRating}</p></div>
             <br>
             </div>`
         })
@@ -101,10 +102,12 @@ mostVoted.addEventListener('click', showMostVoted);
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
             <h2 class="title">${data.Title}</h2>
+            <div class="infoContainer"><p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
+            <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
             <p class="actors"><strong>Protagonistas: </strong>${data.Actors}</p>
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
-            <p class="votes"><strong>Recomendaciones del público: </strong>${data.imdbVotes}</p>
+            <p class="votes"><strong>Recomendaciones del público: </strong>${data.imdbVotes}</p></div>
             <br>
             </div>`
         })
@@ -128,25 +131,15 @@ awards.addEventListener('click', showMostAwards);
             document.getElementById("container").innerHTML +=
             `<div class="bestResult">
             <img class="poster" src=${data.Poster}>
+            <div class="infoContainer"><p class="runtime"><strong>Duración:</strong> ${data.Runtime}</p>
             <h2 class="title">${data.Title}</h2>
             <p class="plot"><strong>Reseña: </strong>${data.Plot}</p>
             <p class="actors"><strong>Protagonistas: </strong>${data.Actors}</p>
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
-            <p class="awards"><strong>Premios y nominaciones: </strong>${data.Awards}</p>
+            <p class="awards"><strong>Premios y nominaciones: </strong>${data.Awards}</p></div>
             <br>
             </div>
-            `
         })
     })
 }
-const btnFilters = document.getElementsById("btnBestRated");
-btnFilters.addEventListener("click", ()=>{
 
-  const showFilters = document.getElementById("container");
-  showFilters.style.display = "block";
-
-  const hiddenLanding = document.getElementById("landing");
-  hiddenLanding.style.display = "none";
-  const hiddenLandingTwo = document.getElementById("landing-two");
-  hiddenLandingTwo.style.display = "none";
-});
