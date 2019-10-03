@@ -138,7 +138,7 @@ awards.addEventListener('click', showMostAwards);
             <p class="genre"><strong>Género: </strong>${data.Genre}</p>
             <p class="awards"><strong>Premios y nominaciones: </strong>${data.Awards}</p></div>
             <br>
-            </div>
+            </div>`
         })
     })
 }
